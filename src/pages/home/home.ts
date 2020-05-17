@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, IonicPage, MenuController } from 'ionic-angular';
 import { CredeciaisDTO } from '../../models/credenciais.dto';
 import { AuthService } from '../../services/auth.service';
+import { SignupPage } from '../signup/signup';
 
 @IonicPage()
 @Component({
@@ -47,5 +48,9 @@ export class HomePage {
 		},
 		error => {});
 		
+	}
+
+	signup() {
+		this.navCtrl.push('SignupPage');
 	}
 }
